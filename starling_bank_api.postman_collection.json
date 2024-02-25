@@ -1,0 +1,315 @@
+{
+	"info": {
+		"_postman_id": "bbb56337-bfcc-46f4-8348-0e4d4028d830",
+		"name": "Starling Bank",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "14215799"
+	},
+	"item": [
+		{
+			"name": "Accounts Roundup",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/v1/accounts-roundup?minTransactionTimestamp=2023-11-06T13%3A19%3A14.133Z&maxTransactionTimestamp=2024-02-14T13%3A19%3A14.143Z",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"accounts-roundup"
+					],
+					"query": [
+						{
+							"key": "minTransactionTimestamp",
+							"value": "2023-11-06T13%3A19%3A14.133Z"
+						},
+						{
+							"key": "maxTransactionTimestamp",
+							"value": "2024-02-14T13%3A19%3A14.143Z"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Accounts",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/v1/accounts",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"accounts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Savings Goals",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/v1/accounts-savings-goals",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"accounts-savings-goals"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Savings Goal",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/v1/accounts-savings-goal?savingsGaolUid=",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"accounts-savings-goal"
+					],
+					"query": [
+						{
+							"key": "savingsGaolUid",
+							"value": ""
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Savings Goal Create",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"Savings Goals Test\",\r\n  \"currency\": \"GBP\",\r\n  \"target\": {\r\n    \"currency\": \"GBP\",\r\n    \"minorUnits\": 20000\r\n  },\r\n  \"base64EncodedPhoto\": \"string\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/v1/accounts-savings-goal-create",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"accounts-savings-goal-create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Savings Goal Update",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"Savings Goals Test 2jksdgksdjgnjkg\",\r\n  \"currency\": \"GBP\",\r\n  \"base64EncodedPhoto\": \"string\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/v1/accounts-savings-goal-update?savingsGaolUid=",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"accounts-savings-goal-update"
+					],
+					"query": [
+						{
+							"key": "savingsGaolUid",
+							"value": ""
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Savings Goal Add Money",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"amount\": {\r\n    \"currency\": \"GBP\",\r\n    \"minorUnits\": 4000\r\n  }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/v1/accounts-savings-goal-add-money?savingsGaolUid=",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"accounts-savings-goal-add-money"
+					],
+					"query": [
+						{
+							"key": "savingsGaolUid",
+							"value": ""
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Savings Goal Delete",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/v1/accounts-savings-goal-delete?savingsGaolUid=",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"accounts-savings-goal-delete"
+					],
+					"query": [
+						{
+							"key": "savingsGaolUid",
+							"value": ""
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Accounts Transactions",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/v1/accounts-transactions?minTransactionTimestamp=2023-11-06T13%3A19%3A14.133Z&maxTransactionTimestamp=2024-02-14T13%3A19%3A14.143Z",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"accounts-transactions"
+					],
+					"query": [
+						{
+							"key": "minTransactionTimestamp",
+							"value": "2023-11-06T13%3A19%3A14.133Z"
+						},
+						{
+							"key": "maxTransactionTimestamp",
+							"value": "2024-02-14T13%3A19%3A14.143Z"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
