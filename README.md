@@ -1,4 +1,4 @@
-# Stephen Hoey - Starling Bank Task
+# Starling Bank Task
 
 	Starling Bank Test
 
